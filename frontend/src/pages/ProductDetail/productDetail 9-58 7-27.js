@@ -8,7 +8,6 @@ import React, { useState } from "react";
 // import CustomerAlsoViewed from "./customerAlsoViewed"
 import BannerSlider1 from "../../components/detail/BannerSlider";
 import "./App.css"
-import App1 from "../../components/image-hover/image-hover";
 
 export default function ProductDetail(see) {
 

@@ -1,28 +1,16 @@
 import React, { useState, useRef, useEffect } from 'react';
 
 // Main App component
-const App1 = () => {
+const App2 = ({ banners }) => {
   return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center p-4">
-      <div className="bg-white p-6 rounded-lg shadow-xl max-w-2xl w-full">
-        // <h1 className="text-3xl font-bold text-gray-800 mb-6 text-center font-inter">
-        //   Image Zoom on Hover
-        // </h1>
-        // <p className="text-gray-600 mb-8 text-center font-inter">
-        //   Hover over the image below to see the zoom effect. The zoom will follow your cursor!
-        // </p>
+
         <ImageZoom
-          src="./img/capture.JPG"
+          src={`${banners}`}
           alt="Provided Image"
           zoomPower={2} // Adjust this value to control how much it zooms (2 means 200% zoom)
-          height={320} // Pass height as a number (in pixels)
+          height={380} // Pass height as a number (in pixels)
         />
-        // <div className="mt-8 text-sm text-gray-500 text-center font-inter">
-        //   <p>This component demonstrates image zoom using React state and CSS background properties.</p>
-        //   <p>It tracks the cursor position to adjust the background-position for a dynamic zoom effect.</p>
-        // </div>
-      </div>
-    </div>
+
   );
 };
 
@@ -125,7 +113,6 @@ const ImageZoom = ({ src, alt, zoomPower = 2, height = 384 }) => { // Default he
       onMouseMove={handleMouseMove}
       style={{
         height: `${height}px`, // Apply height directly using style prop
-        // Only apply background image if loaded, otherwise show a fallback color
         backgroundImage: imageLoaded ? `url(${src})` : 'none',
         backgroundColor: imageError ? '#f8d7da' : '#e2e8f0', // Red for error, light gray for loading/default
         backgroundRepeat: 'no-repeat',
@@ -158,4 +145,4 @@ const ImageZoom = ({ src, alt, zoomPower = 2, height = 384 }) => { // Default he
   );
 };
 
-export default App1;
+export default App2;

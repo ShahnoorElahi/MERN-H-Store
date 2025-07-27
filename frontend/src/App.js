@@ -73,6 +73,7 @@ function App() {
               <div >
                 {/* <Navbar /> */}
                 <App1/>
+                <ProductDetail />
                 {/* <ProductSections/>
                 <Carousel />
                 <ProductDetail />

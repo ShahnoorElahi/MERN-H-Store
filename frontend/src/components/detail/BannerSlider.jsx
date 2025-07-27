@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import './Carousel.module.css';
-
+import App2 from '../image-hoverS/image-hoverS';
 
 
 const BannerSlider1 = ({ banners }) => {
@@ -116,20 +116,21 @@ const BannerSlider1 = ({ banners }) => {
                 <div class="swiper-wrapper" ref={swiperWrapperRef} id="img_slide" style={{ transform: "translate3d(0px, 0px, 0px)" }}>
 
                     {clonedBanners.map((banner, index) => (
-                        <div class="swiper-slide" key={index} style={{ width: "100%", marginRight: "0px" }}>
+                        <div class="swiper-slide" key={index} style={{ width: "100%", marginRight: "0px", display:"inline-block" }}>
                             {/* <div class="swiper-slide swiper-slide-active" key={index} style={{ width: "431px", marginRight: "10px" }}> */}
 
 
                             <a href={banner.link} title={banner.alt}>
                                 {/* <img id="imgv" alt="1pc Vanity Makeup Organizer, Spacious Countertop Design With Drawers" height="557" width="557" class="img-fluid border-radius12 img-zoom " src="images/product_gallery/1719156634_1718986551_makeup_organizer_.jpg" /> */}
-                                <img
+                                <App2 banners={banner.src}/>
+                                {/* <img
                                     id="imgv"
                                     src={banner.src}
                                     className="img-fluid width-vw"
                                     alt="1pc Vanity Makeup Organizer, Spacious Countertop Design With Drawers"//{banner.alt}
                                     width="100%"
                                     height="auto"
-                                />
+                                /> */}
                             </a>
                         </div>
                     ))}
