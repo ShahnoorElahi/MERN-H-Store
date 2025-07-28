@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from "react";
+
+import Example from "./pages/Blog Edit/Blog";
+
 import Navbar from "./components/Navbar/Navbar";
 import Carousel from "./components/carosel/carosel";
 import FAllProducts from "./components/fAllProducts/fAllProducts";
@@ -62,6 +65,7 @@ function App() {
             element={
               <div >
                 <Navbar />
+                <Example/>
               </div>
             }
           />
