@@ -65,6 +65,8 @@ function App() {
             element={
               <div >
                 <Navbar />
+                <FAllProducts/>
+                <FBlogs/>
                 <Example/>
               </div>
             }
@@ -112,38 +114,3 @@ function App() {
 
 
 export default App;
-
-
-
-
-
-
-
-
-
-
-
-
-
-// useEffect(() => {
-    
-    
-    
-//   $(document).ready(function() {
-//       $('.img-zoom').okzoom({
-//           width: 250,
-//           height: 250,
-//           round: true,
-//           background: "#fff",
-//           backgroundRepeat: "repeat",
-//           shadow: "0 0 5px #000",
-//       });
-  
-//   })
-
-
-
-
-
-
-//   }, []);
